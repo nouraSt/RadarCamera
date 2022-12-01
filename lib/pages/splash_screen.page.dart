@@ -2,14 +2,35 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:radarcam_app/constants.dart';
+import 'package:radarcam_app/pages/termsofuse_screen.page.dart';
+import 'package:radarcam_app/widgets/circular_prog.widget.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
   @override
+  State<SplashScreen> createState() => _SplashScreenState();
+
+  
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+     new Future.delayed(
+        const Duration(seconds: 3),
+        () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => TermsOfUse()),
+            ));
+  }
+  @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 255, 77, 7),
+      backgroundColor:colorbtn,
       body: Stack(
         alignment: Alignment.center,
         children: [
@@ -24,10 +45,10 @@ class SplashScreen extends StatelessWidget {
           right: 129,
           child: Image.asset('assets/images/group.png',width: 120,height: 140 ,)),
         Positioned(
-          top: 500,
+          top:450,
           left: 170,
           right: 170,
-          child: Image.asset('assets/images/icon.png',width: 65,height: 65 ,)),  
+          child: CustomCircular())
 
         ],
       ),
