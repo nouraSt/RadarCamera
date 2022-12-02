@@ -4,16 +4,20 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class BtnWidget extends StatelessWidget {
-   BtnWidget(this.txt, this.borderColor,this.backBtnColor,this.textColr, {super.key});
+   BtnWidget(this.txt, this.borderColor,this.backBtnColor,this.textColr,this.navigate, {super.key});
    String txt='';
    Color borderColor=Colors.transparent; 
    Color backBtnColor=Colors.transparent; 
    Color textColr= Colors.transparent;
+   Future navigate; 
+    
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                  navigate;
+              },
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),

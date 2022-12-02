@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:radarcam_app/constants.dart';
+import 'package:radarcam_app/widgets/ad.widget.dart';
 import 'package:radarcam_app/widgets/bar_item.widget.dart';
 import 'package:radarcam_app/widgets/camera_card.widget.dart';
 
@@ -43,7 +44,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             SizedBox(height: 20,),
                             ItemBar('My reports'),
                             SizedBox(height: 20,),
-                            ItemBar('privacy policy')
+                            ItemBar('privacy policy'),
+                            SizedBox(height: 20,),
+                            AdContainer()
       
                         ]),
                       ),
@@ -61,7 +64,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ],
         ),
       ),
-      bottomNavigationBar: MyNavigationBar(),
+      
     );
   }
 }

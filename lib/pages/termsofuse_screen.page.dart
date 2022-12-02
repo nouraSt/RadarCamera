@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:radarcam_app/constants.dart';
+import 'package:radarcam_app/pages/home_screen.page.dart';
 import 'package:radarcam_app/widgets/btn.widget.dart';
 
 class TermsOfUse extends StatelessWidget {
@@ -9,6 +10,10 @@ class TermsOfUse extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
+      
+    
+    
     return Scaffold(
      backgroundColor: colorback,
       body: Stack(alignment: Alignment.center,
@@ -34,9 +39,15 @@ class TermsOfUse extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                          crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                        BtnWidget('Reject', Colors.red, Colors.pink,Colors.red),
+                        BtnWidget('Reject', Colors.red, Colors.pink,Colors.red,Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const HomePage()),
+  )),
                         SizedBox(width: 10,),
-                        BtnWidget('accept', Colors.red, Colors.red,Colors.white),
+                        BtnWidget('accept', Colors.red, Colors.red,Colors.white, Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const TermsOfUse()),
+  )),
                        ],),
                        SizedBox(height: 300,width:50)
                       ]),
@@ -55,4 +66,5 @@ class TermsOfUse extends StatelessWidget {
       ),
     );
   }
-}
+ 
+  }

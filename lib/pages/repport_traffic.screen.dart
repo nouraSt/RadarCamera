@@ -13,6 +13,12 @@ class ReportTrafficScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Future nav=
+      Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const ReportTrafficScreen()),
+  );
+ 
     return Scaffold(
      backgroundColor: colorback,
       body: SingleChildScrollView(
@@ -25,6 +31,7 @@ class ReportTrafficScreen extends StatelessWidget {
                   Positioned(
                     bottom: 0,
                     child: Container(
+                      // ignore: sort_child_properties_last
                       child:Padding(
                       padding: EdgeInsets.all(20),
                       child: Container(
@@ -55,9 +62,9 @@ class ReportTrafficScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                               BtnWidget('later', Colors.transparent, Colors.white, Colors.black),
+                               BtnWidget('later', Colors.transparent, Colors.white, Colors.black,nav),
                                SizedBox(width: 20,),
-                               BtnWidget('Report', Colors.transparent, colorbtn, Colors.white),
+                               BtnWidget('Report', Colors.transparent, colorbtn, Colors.white,nav),
                           ],),
                         ]),
                       ),

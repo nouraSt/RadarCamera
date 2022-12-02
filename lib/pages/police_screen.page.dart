@@ -13,6 +13,11 @@ class PoliceScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Future nav=
+      Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const PoliceScreen()),
+  );
     return Scaffold(
      backgroundColor: colorback,
       body: SingleChildScrollView(
@@ -50,9 +55,9 @@ class PoliceScreen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                 BtnWidget('later', Colors.transparent, Colors.white, Colors.black),
+                                 BtnWidget('later', Colors.transparent, Colors.white, Colors.black,nav),
                                  SizedBox(width: 10,),
-                                 BtnWidget('Report', Colors.transparent, colorbtn, Colors.white),
+                                 BtnWidget('Report', Colors.transparent, colorbtn, Colors.white,nav),
                             ],),
                              
                             

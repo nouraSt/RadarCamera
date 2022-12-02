@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:radarcam_app/constants.dart';
+import 'package:radarcam_app/pages/hazard_screen.page.dart';
+import 'package:radarcam_app/pages/police_screen.page.dart';
+import 'package:radarcam_app/pages/repport_traffic.screen.dart';
+import 'package:radarcam_app/widgets/ad.widget.dart';
 import 'package:radarcam_app/widgets/bottom_nav.widget.dart';
 import 'package:radarcam_app/widgets/circular_item.widget.dart';
 
@@ -10,6 +14,8 @@ class UpdateTheMap extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
+
     return Scaffold(
      backgroundColor: colorback,
       body: Stack(alignment: Alignment.center,
@@ -41,7 +47,9 @@ class UpdateTheMap extends StatelessWidget {
                           children: [
                           CircularItem('assets/images/image35.png','Speed camera'),
                           CircularItem('assets/images/image36.png','Hazard'),
-                        ],)
+                        ],),
+                        SizedBox(height:50,),
+                        AdContainer()
                       ]),
                     ),
                   ) ,
@@ -57,7 +65,6 @@ class UpdateTheMap extends StatelessWidget {
          
         ],
       ),
-      bottomNavigationBar: MyNavigationBar(),
     );
   }
 }

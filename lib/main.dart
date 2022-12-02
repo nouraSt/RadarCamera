@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:radarcam_app/pages/home_screen.page.dart';
+import 'package:radarcam_app/pages/map.page.dart';
 import 'package:radarcam_app/pages/map_screen.page.dart';
 import 'package:radarcam_app/pages/police_screen.page.dart';
 import 'package:radarcam_app/pages/settings_screen.dart';
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       
-      home: PoliceScreen(),
+      home: SplashScreen(),
     );
   }
 }

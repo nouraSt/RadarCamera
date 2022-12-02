@@ -10,7 +10,7 @@ class CamerCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 350,
-      height: 150,
+      height: 100,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(Radius.circular(10)),
