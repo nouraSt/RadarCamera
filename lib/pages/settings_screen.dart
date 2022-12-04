@@ -23,7 +23,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       body: SingleChildScrollView(
         child: Stack(alignment: Alignment.center,
           children: [
-                 Container(child: Padding(padding: EdgeInsets.all(20), child: Text('Terms of use',textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontSize: 20), )),
+                 Container(child: Padding(padding: EdgeInsets.all(20), child: Text('Settings',textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontSize: 20), )),
                   color: colorbtn,
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height),
@@ -56,7 +56,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     ),
                     ),
                     width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height-120),
+                    height: MediaQuery.of(context).size.height-70),
             
                   ),
       

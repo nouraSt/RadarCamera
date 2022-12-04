@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:radarcam_app/constants.dart';
 import 'package:radarcam_app/pages/hazard_screen.page.dart';
 import 'package:radarcam_app/pages/police_screen.page.dart';
+import 'package:radarcam_app/pages/reportcam_screen.page.dart';
 import 'package:radarcam_app/pages/repport_traffic.screen.dart';
 import 'package:radarcam_app/widgets/ad.widget.dart';
 import 'package:radarcam_app/widgets/bottom_nav.widget.dart';
@@ -14,13 +15,11 @@ class UpdateTheMap extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-
     return Scaffold(
      backgroundColor: colorback,
       body: Stack(alignment: Alignment.center,
         children: [
-               Container(child: Padding(padding: EdgeInsets.all(20), child: Text('Terms of use',textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontSize: 20), )),
+               Container(child: Padding(padding: EdgeInsets.all(20), child: Text('Update the map',textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontSize: 20), )),
                 color: colorbtn,
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height),
@@ -37,16 +36,40 @@ class UpdateTheMap extends StatelessWidget {
                            crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                          CircularItem('assets/images/image32.png','Traffic'),
-                          CircularItem('assets/images/image33.png','Police'),
+                          TextButton(onPressed: (){
+                            Navigator.push(
+                               context,
+                             MaterialPageRoute(builder: (context) => const ReportTrafficScreen()),
+                                );
+                          },
+                            child: CircularItem('assets/images/image32.png','Traffic')),
+                          TextButton(onPressed: (){
+                            Navigator.push(
+                          context,
+                         MaterialPageRoute(builder: (context) => const PoliceScreen()),
+                              );
+                          },
+                            child: CircularItem('assets/images/image33.png','Police')),
                         ],),
                         SizedBox(height:50,),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                          CircularItem('assets/images/image35.png','Speed camera'),
-                          CircularItem('assets/images/image36.png','Hazard'),
+                          TextButton(onPressed: (){
+                              Navigator.push(
+                              context,
+                          MaterialPageRoute(builder: (context) => const MapPageReport()),
+                            );
+                          },
+                            child: CircularItem('assets/images/image35.png','Speed camera')),
+                          TextButton(onPressed: (){
+                            Navigator.push(
+                         context,
+                         MaterialPageRoute(builder: (context) => const HazardScreen()),
+                          );
+                          },
+                            child: CircularItem('assets/images/image36.png','Hazard')),
                         ],),
                         SizedBox(height:50,),
                         AdContainer()
@@ -58,7 +81,7 @@ class UpdateTheMap extends StatelessWidget {
                   ),
                   ),
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height-120),
+                  height: MediaQuery.of(context).size.height-130),
           
                 ),
 

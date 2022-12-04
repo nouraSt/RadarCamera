@@ -9,14 +9,14 @@ class BtnWidget extends StatelessWidget {
    Color borderColor=Colors.transparent; 
    Color backBtnColor=Colors.transparent; 
    Color textColr= Colors.transparent;
-   Future navigate; 
+   dynamic navigate; 
     
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
               onPressed: () {
-                  navigate;
+                 navigate;
               },
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
@@ -27,7 +27,7 @@ class BtnWidget extends StatelessWidget {
                       const EdgeInsets.symmetric(vertical: 20, horizontal: 40)),
               child: Text(
                 txt,
-                style: TextStyle(color: textColr, fontSize: 20),
+                style: TextStyle(color: textColr, fontSize: 16),
               ),
             );
   }

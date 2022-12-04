@@ -13,17 +13,13 @@ class HazardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Future nav=
-      Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => const HazardScreen()),
-  );
+    
     return Scaffold(
      backgroundColor: colorback,
       body: SingleChildScrollView(
         child: Stack(alignment: Alignment.center,
           children: [
-                 Container(child: Padding(padding: EdgeInsets.all(20), child: Text('Terms of use',textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontSize: 20), )),
+                 Container(child: Padding(padding: EdgeInsets.all(20), child: Text('Repport Hazard',textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontSize: 20), )),
                   color: colorbtn,
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height),
@@ -62,9 +58,9 @@ class HazardScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                               BtnWidget('later', Colors.transparent, Colors.white, Colors.black,nav),
-                               SizedBox(width: 20,),
-                               BtnWidget('Report', Colors.transparent, colorbtn, Colors.white,nav),
+                               BtnWidget('later', Colors.transparent, Colors.white, Colors.black,(){}),
+                               SizedBox(width: 10,),
+                               BtnWidget('Report', Colors.transparent, colorbtn, Colors.white,(){}),
                           ],),
                         ]),
                       ),
@@ -74,7 +70,7 @@ class HazardScreen extends StatelessWidget {
                     ),
                     ),
                     width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height-100),
+                    height: MediaQuery.of(context).size.height-60),
             
                   ),
       

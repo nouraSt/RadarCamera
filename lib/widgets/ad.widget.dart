@@ -10,6 +10,7 @@ class AdContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      alignment: Alignment.center,
       width: 300,
       height: 70,
       child: Image.asset('assets/images/rec80.png'),

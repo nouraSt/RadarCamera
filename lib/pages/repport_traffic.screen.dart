@@ -13,18 +13,14 @@ class ReportTrafficScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Future nav=
-      Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => const ReportTrafficScreen()),
-  );
+    
  
     return Scaffold(
      backgroundColor: colorback,
       body: SingleChildScrollView(
         child: Stack(alignment: Alignment.center,
           children: [
-                 Container(child: Padding(padding: EdgeInsets.all(20), child: Text('Terms of use',textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontSize: 20), )),
+                 Container(child:  Padding(padding: EdgeInsets.all(20), child: Text('Repport Traffic',textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontSize: 20), )),
                   color: colorbtn,
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height),
@@ -38,7 +34,7 @@ class ReportTrafficScreen extends StatelessWidget {
                         child: Column(
                            
                           children: [
-                          CircularItem('assets/images/image36.png', 'Hazard'),
+                          CircularItem('assets/images/image36.png', 'Hazard',),
                           SizedBox(height: 20,),
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -46,7 +42,7 @@ class ReportTrafficScreen extends StatelessWidget {
                             children: [
                                RectangularCard('On road', 'assets/images/group445.png'),
                                SizedBox(width: 20,),
-                               RectangularCard('Shoulder', 'assets/images/image446.png'),
+                               RectangularCard('Shoulder', 'assets/images/group446.png'),
                           ],),
                           SizedBox(height: 20,),
                           CircularItem('assets/images/image50.png', 'Weather'),
@@ -62,9 +58,9 @@ class ReportTrafficScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                               BtnWidget('later', Colors.transparent, Colors.white, Colors.black,nav),
+                               BtnWidget('later', Colors.transparent, Colors.white, Colors.black,(){}),
                                SizedBox(width: 20,),
-                               BtnWidget('Report', Colors.transparent, colorbtn, Colors.white,nav),
+                               BtnWidget('Report', Colors.transparent, colorbtn, Colors.white,(){}),
                           ],),
                         ]),
                       ),
@@ -74,7 +70,7 @@ class ReportTrafficScreen extends StatelessWidget {
                     ),
                     ),
                     width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height-100),
+                    height: MediaQuery.of(context).size.height-60),
             
                   ),
       
