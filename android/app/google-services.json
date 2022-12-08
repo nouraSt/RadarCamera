@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "778884444170",
+    "project_id": "radarcam-ma",
+    "storage_bucket": "radarcam-ma.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778884444170:android:6faeebd444ba460ad8aff3",
+        "android_client_info": {
+          "package_name": "com.radarcam.radarcam_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778884444170-5gsbo0lmkd5qv2jt4efm5mcb3h5a92fh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi491ibReJk8wr2dEsIdejKcIJdew-LMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778884444170-5gsbo0lmkd5qv2jt4efm5mcb3h5a92fh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "778884444170-ldp2n8ns2ccaebfnimbe695gs03kkv2r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hbstudio.radarmaroc"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778884444170:android:1f1ba8c7fddeeb30d8aff3",
+        "android_client_info": {
+          "package_name": "com.radarcam.radarma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778884444170-5gsbo0lmkd5qv2jt4efm5mcb3h5a92fh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi491ibReJk8wr2dEsIdejKcIJdew-LMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778884444170-5gsbo0lmkd5qv2jt4efm5mcb3h5a92fh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "778884444170-ldp2n8ns2ccaebfnimbe695gs03kkv2r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.hbstudio.radarmaroc"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

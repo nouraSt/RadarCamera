@@ -10,33 +10,46 @@ class TermsOfUse extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   
-      
-    
-    
     return Scaffold(
-     backgroundColor: colorback,
-      body: SingleChildScrollView(
-        child: Stack(alignment: Alignment.center,
-          children: [
-                 Container(child: const Padding(padding: EdgeInsets.all(20), child: Text('Terms of use',textAlign: TextAlign.center,style: TextStyle(color: Colors.white,fontSize: 20), )),
-                  color: colorbtn,
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height),
-                  Positioned(
-                    bottom: 0,
-                    child: Container(child:Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Expanded(
-                        child: Column(children: [
-                          const Text('What is lorem epsum',style: TextStyle(fontSize: 20,color: Colors.black,fontWeight: FontWeight.bold ),),
-                          const SizedBox(height: 20,),
-                          const Padding(
-                            padding:  EdgeInsets.all(20),
-                            child: Text('What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum',
-                            style: TextStyle(height: 1.5, fontSize: 14),textAlign: TextAlign.center,)),
-                            const SizedBox(height: 120,),
-                            Row(
+      backgroundColor: Colors.red,
+      appBar: AppBar(
+        title : Text("Terms and conditions"),
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+      ),
+      body: Container(
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(16),
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 12),
+          child: ListView(
+            children:  [
+              const SizedBox(height: 20),
+              const Center(
+                child: Text(
+                  "Lorem ipsum",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 10),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: SingleChildScrollView(
+                  child: Text(
+                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." *
+                        10,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 10),
+              Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                            crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
@@ -62,20 +75,8 @@ class TermsOfUse extends StatelessWidget {
               ),
             )
                          ],),
-                        
-                        ]),
-                      ),
-                    ) ,
-                    decoration: const BoxDecoration( color: Colors.white,borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20),topRight: Radius.circular(20)
-                    )),
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height-60),
-            
-                  ),
-      
-           
-          ],
+            ],
+          ),
         ),
       ),
     );

@@ -29,53 +29,61 @@ class UpdateTheMap extends StatelessWidget {
                     child:Padding(
                     padding: EdgeInsets.all(20),
                     child: Container(
-                      child: Column(
-                         
-                        children: [
-                        Row(
-                           crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                          TextButton(onPressed: (){
-                            Navigator.push(
-                               context,
-                             MaterialPageRoute(builder: (context) => const ReportTrafficScreen()),
-                                );
-                          },
-                            child: CircularItem('assets/images/image32.png','Traffic')),
-                          TextButton(onPressed: (){
-                            Navigator.push(
-                          context,
-                         MaterialPageRoute(builder: (context) => const PoliceScreen()),
-                              );
-                          },
-                            child: CircularItem('assets/images/image33.png','Police')),
-                        ],),
-                        SizedBox(height:50,),
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                          TextButton(onPressed: (){
-                              Navigator.push(
+                      alignment: Alignment.center,
+                      child: 
+                         SingleChildScrollView(
+                          child: Column(
+                             crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                            Row(
+                               crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                              TextButton(onPressed: (){
+                                Navigator.push(
+                                   context,
+                                 MaterialPageRoute(builder: (context) => const ReportTrafficScreen()),
+                                    );
+                              },
+                                child: CircularItem('assets/images/image32.png','Traffic')),
+                                SizedBox(height: 10,),
+                              TextButton(onPressed: (){
+                                Navigator.push(
                               context,
-                          MaterialPageRoute(builder: (context) => const MapPageReport()),
-                            );
-                          },
-                            child: CircularItem('assets/images/image35.png','Speed camera')),
-                          TextButton(onPressed: (){
-                            Navigator.push(
-                         context,
-                         MaterialPageRoute(builder: (context) => const HazardScreen()),
-                          );
-                          },
-                            child: CircularItem('assets/images/image36.png','Hazard')),
-                        ],),
-                        SizedBox(height:50,),
-                        AdContainer()
-                      ]),
+                             MaterialPageRoute(builder: (context) => const PoliceScreen()),
+                                  );
+                              },
+                                child: CircularItem('assets/images/image33.png','Police')),
+                            ],),
+                            SizedBox(height:50,),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                              TextButton(onPressed: (){
+                                  Navigator.push(
+                                  context,
+                              MaterialPageRoute(builder: (context) => const MapPageReport()),
+                                );
+                              },
+                                child: CircularItem('assets/images/image35.png','Speed camera')),
+                                SizedBox(height: 10,),
+                              TextButton(onPressed: (){
+                                Navigator.push(
+                             context,
+                             MaterialPageRoute(builder: (context) => const HazardScreen()),
+                              );
+                              },
+                                child: CircularItem('assets/images/image36.png','Hazard')),
+                            ],),
+                            SizedBox(height:50,),
+                            AdContainer()
+                          ]),
+                        ),
+                      ),
                     ),
-                  ) ,
+                  
                   decoration: BoxDecoration( color: colorback,borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(20),topRight: Radius.circular(20)
                   ),

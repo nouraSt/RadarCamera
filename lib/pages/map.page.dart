@@ -34,16 +34,19 @@ class _MapPageState extends State<MapPage> {
     return Scaffold(
       body: Stack(
         children: [
-          GoogleMap(
-          mapType: MapType.hybrid,
-          initialCameraPosition: _kGooglePlex,
-          onMapCreated: (GoogleMapController controller) {
-            _controller.complete(controller);
-          },
-        ),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height-60,
+            child: GoogleMap(
+            mapType: MapType.normal,
+            initialCameraPosition: _kGooglePlex,
+            onMapCreated: (GoogleMapController controller) {
+              _controller.complete(controller);
+            },
+                  ),
+          ),
         Positioned(
           top:400,
-          left: 30,
           child: AdContainer()),
         Positioned(
           top:400,

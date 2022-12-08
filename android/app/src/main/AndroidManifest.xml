@@ -20,8 +20,8 @@
               android:name="io.flutter.embedding.android.NormalTheme"
               android:resource="@style/NormalTheme"
               />
-             <meta-data android:name="com.google.android.geo.API_KEY"
-               android:value="YOUR KEY HERE"/>  
+             <meta-data android:name="com.google.android.geo.AIzaSyC2RSr5r0YysyLqrDWSU9Ue7nmjPZh-_8Q"
+               android:value="AIzaSyC2RSr5r0YysyLqrDWSU9Ue7nmjPZh-_8Q"/>  
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
